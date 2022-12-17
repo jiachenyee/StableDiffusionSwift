@@ -1,0 +1,85 @@
+[
+  {
+    "shortDescription" : "Stable Diffusion generates images conditioned on text and\/or other images as input through the diffusion process. Please refer to https:\/\/arxiv.org\/abs\/2112.10752 for details.",
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32)",
+        "shortDescription" : "The token embeddings as encoded by the Transformer model",
+        "shape" : "[]",
+        "name" : "last_hidden_state",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32)",
+        "shortDescription" : "The version of the `last_hidden_state` output after pooling",
+        "shape" : "[]",
+        "name" : "pooled_outputs",
+        "type" : "MultiArray"
+      }
+    ],
+    "version" : "stabilityai\/stable-diffusion-2-base",
+    "modelParameters" : [
+
+    ],
+    "author" : "Please refer to the Model Card available at huggingface.co\/stabilityai\/stable-diffusion-2-base",
+    "specificationVersion" : 7,
+    "storagePrecision" : "Float16",
+    "license" : "OpenRAIL (https:\/\/huggingface.co\/spaces\/CompVis\/stable-diffusion-license)",
+    "mlProgramOperationTypeHistogram" : {
+      "Ios16.cast" : 3,
+      "Ios16.mul" : 23,
+      "Ios16.layerNorm" : 47,
+      "Ios16.sub" : 1,
+      "BandPart" : 1,
+      "Stack" : 1,
+      "Transpose" : 115,
+      "Ios16.linear" : 138,
+      "Ios16.add" : 70,
+      "Ios16.matmul" : 46,
+      "Ios16.gelu" : 23,
+      "Ios16.softmax" : 23,
+      "ExpandDims" : 1,
+      "Ios16.gather" : 1,
+      "Ios16.gatherNd" : 1,
+      "Ios16.reshape" : 230,
+      "Ios16.reduceArgmax" : 1
+    },
+    "computePrecision" : "Mixed (Float16, Float32, Int32)",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "13.0",
+      "tvOS" : "16.0",
+      "watchOS" : "9.0",
+      "iOS" : "16.0",
+      "macCatalyst" : "16.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "inputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 1 × 77)",
+        "shortDescription" : "The token ids that represent the input text",
+        "shape" : "[1, 77]",
+        "name" : "input_ids",
+        "type" : "MultiArray"
+      }
+    ],
+    "userDefinedMetadata" : {
+      "com.github.apple.coremltools.version" : "6.1",
+      "com.github.apple.coremltools.source" : "torch==1.13.1"
+    },
+    "generatedClassName" : "Stable_Diffusion_version_stabilityai_stable_diffusion_2_base_text_encoder",
+    "method" : "predict"
+  }
+]

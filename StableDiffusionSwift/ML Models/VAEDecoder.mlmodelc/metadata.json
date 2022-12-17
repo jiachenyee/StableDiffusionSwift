@@ -1,0 +1,75 @@
+[
+  {
+    "shortDescription" : "Stable Diffusion generates images conditioned on text and\/or other images as input through the diffusion process. Please refer to https:\/\/arxiv.org\/abs\/2112.10752 for details.",
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32)",
+        "shortDescription" : "Generated image normalized to range [-1, 1]",
+        "shape" : "[]",
+        "name" : "image",
+        "type" : "MultiArray"
+      }
+    ],
+    "version" : "stabilityai\/stable-diffusion-2-base",
+    "modelParameters" : [
+
+    ],
+    "author" : "Please refer to the Model Card available at huggingface.co\/stabilityai\/stable-diffusion-2-base",
+    "specificationVersion" : 7,
+    "storagePrecision" : "Float16",
+    "license" : "OpenRAIL (https:\/\/huggingface.co\/spaces\/CompVis\/stable-diffusion-license)",
+    "mlProgramOperationTypeHistogram" : {
+      "Ios16.cast" : 1,
+      "Ios16.mul" : 1,
+      "Ios16.sqrt" : 30,
+      "Ios16.sub" : 30,
+      "Transpose" : 7,
+      "UpsampleNearestNeighbor" : 3,
+      "Ios16.conv" : 36,
+      "Ios16.add" : 45,
+      "Ios16.linear" : 4,
+      "Ios16.matmul" : 2,
+      "Ios16.realDiv" : 30,
+      "Ios16.reduceMean" : 60,
+      "Ios16.softmax" : 1,
+      "Ios16.batchNorm" : 30,
+      "Ios16.square" : 30,
+      "Ios16.reshape" : 70,
+      "Ios16.silu" : 29
+    },
+    "computePrecision" : "Mixed (Float32, Float16, Int32)",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "13.0",
+      "tvOS" : "16.0",
+      "watchOS" : "9.0",
+      "iOS" : "16.0",
+      "macCatalyst" : "16.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "inputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 1 × 4 × 64 × 64)",
+        "shortDescription" : "The denoised latent embeddings from the unet model after the last step of reverse diffusion",
+        "shape" : "[1, 4, 64, 64]",
+        "name" : "z",
+        "type" : "MultiArray"
+      }
+    ],
+    "userDefinedMetadata" : {
+      "com.github.apple.coremltools.version" : "6.1",
+      "com.github.apple.coremltools.source" : "torch==1.13.1"
+    },
+    "generatedClassName" : "Stable_Diffusion_version_stabilityai_stable_diffusion_2_base_vae_decoder",
+    "method" : "predict"
+  }
+]
