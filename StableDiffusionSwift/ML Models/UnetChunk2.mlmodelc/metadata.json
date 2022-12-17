@@ -1,0 +1,204 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "storagePrecision" : "Float16",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32)",
+        "shortDescription" : "",
+        "shape" : "[]",
+        "name" : "noise_pred",
+        "type" : "MultiArray"
+      }
+    ],
+    "modelParameters" : [
+
+    ],
+    "specificationVersion" : 7,
+    "mlProgramOperationTypeHistogram" : {
+      "Transpose" : 18,
+      "UpsampleNearestNeighbor" : 3,
+      "Ios16.reduceMean" : 114,
+      "Ios16.softmax" : 210,
+      "Split" : 9,
+      "Ios16.add" : 141,
+      "Concat" : 28,
+      "Ios16.realDiv" : 30,
+      "Ios16.square" : 30,
+      "Ios16.sub" : 57,
+      "Ios16.cast" : 14,
+      "Ios16.conv" : 153,
+      "Ios16.einsum" : 420,
+      "Ios16.gelu" : 9,
+      "Ios16.reshape" : 78,
+      "Ios16.batchNorm" : 30,
+      "Ios16.rsqrt" : 27,
+      "Ios16.silu" : 21,
+      "Ios16.sqrt" : 30,
+      "SliceByIndex" : 630,
+      "Ios16.mul" : 300
+    },
+    "computePrecision" : "Mixed (Int32, Float16, Float32)",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "13.0",
+      "tvOS" : "16.0",
+      "watchOS" : "9.0",
+      "iOS" : "16.0",
+      "macCatalyst" : "16.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "userDefinedMetadata" : {
+
+    },
+    "inputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float16",
+        "formattedType" : "MultiArray (Float16 2 × 1024 × 1 × 77)",
+        "shortDescription" : "",
+        "shape" : "[2, 1024, 1, 77]",
+        "name" : "encoder_hidden_states",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 640 × 32 × 32)",
+        "shortDescription" : "",
+        "shape" : "[2, 640, 32, 32]",
+        "name" : "input_115_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 1280 × 8 × 8)",
+        "shortDescription" : "",
+        "shape" : "[2, 1280, 8, 8]",
+        "name" : "input_171_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 2560 × 8 × 8)",
+        "shortDescription" : "",
+        "shape" : "[2, 2560, 8, 8]",
+        "name" : "input_253_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 320 × 64 × 64)",
+        "shortDescription" : "",
+        "shape" : "[2, 320, 64, 64]",
+        "name" : "input_35_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 640 × 16 × 16)",
+        "shortDescription" : "",
+        "shape" : "[2, 640, 16, 16]",
+        "name" : "input_117_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 320 × 32 × 32)",
+        "shortDescription" : "",
+        "shape" : "[2, 320, 32, 32]",
+        "name" : "input_63_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 1280 × 1 × 1)",
+        "shortDescription" : "",
+        "shape" : "[2, 1280, 1, 1]",
+        "name" : "input_15_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 640 × 32 × 32)",
+        "shortDescription" : "",
+        "shape" : "[2, 640, 32, 32]",
+        "name" : "input_89_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 320 × 64 × 64)",
+        "shortDescription" : "",
+        "shape" : "[2, 320, 64, 64]",
+        "name" : "input_7_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 1280 × 16 × 16)",
+        "shortDescription" : "",
+        "shape" : "[2, 1280, 16, 16]",
+        "name" : "input_143_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 1280 × 16 × 16)",
+        "shortDescription" : "",
+        "shape" : "[2, 1280, 16, 16]",
+        "name" : "input_169_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 1280 × 8 × 8)",
+        "shortDescription" : "",
+        "shape" : "[2, 1280, 8, 8]",
+        "name" : "hidden_states_149_cast",
+        "type" : "MultiArray"
+      },
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 2 × 320 × 64 × 64)",
+        "shortDescription" : "",
+        "shape" : "[2, 320, 64, 64]",
+        "name" : "input_61_cast",
+        "type" : "MultiArray"
+      }
+    ],
+    "generatedClassName" : "Stable_Diffusion_version_stabilityai_stable_diffusion_2_base_unet_chunk2",
+    "method" : "predict"
+  }
+]
